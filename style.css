@@ -5,6 +5,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #ffffff;
+  
 }
 .container {
   width: auto;
@@ -12,12 +13,13 @@ body {
   display: grid;
   grid-gap: 0px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   grid-template-areas:
     "navbar navbar navbar navbar"
     "hero hero hero hero"
     "main main main main"
     "blog1 blog2 blog3 blog4"
+    "profile profile profile profile"
     "footer footer footer footer";
 }
 .navbar {
@@ -27,6 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 .logo {
   height: 60px;
@@ -54,9 +57,13 @@ body {
 .heroimage {
   width: 100%;
   height: auto;
+  
   background-image: url("https://via.placeholder.com/1000x300");
   background-size: cover;
   background-position: center;
+  border-bottom-right-radius:25px ;
+  border-bottom-left-radius: 25px;
+ 
   display: block;
 }
 .heroimage-text,
@@ -106,31 +113,40 @@ body {
   grid-area: main;
   color:#A75439 ;
   padding: 20px;
+  gap: 10px;
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: left;
 
 /*BLOG1*/
 }
+.blog-containers {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  grid-area: main;
+}
 .blog1-container {
   display: flex;
   flex-direction: column;
-  align-items: top;
+  align-items: center;
   justify-content: center;
   grid-area: blog1;
 }
 .blog1 {
   height: 250px;
-  width: auto;
+  width: 250px;
   margin: 10px;
   border-radius: 25px;
   grid-area: blog2;
+  display: flex;
+  justify-content: center;
 }
 
 .blog1title {
-  font-size:1.2rem ;
+  font-size:1rem ;
   font-weight: bold;
   color: rgb(212,110,103);
   display: flex;
@@ -139,6 +155,23 @@ body {
   justify-content: center;
   padding: auto;
   grid-area: blog1;
+}
+.blog1text {
+  font-size: 0.7rem;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 3px;
+  margin-left: 15px;
+  margin-right: 15px;
+  grid-area: blog1;
+
 }
 /*BLOG2*/
 
@@ -157,7 +190,7 @@ body {
   grid-area: blog2;
 }
 .blog2title {
-  font-size:1.2rem ;
+  font-size:1rem ;
   font-weight: bold;
   color: rgb(212,110,103);
   display: flex;
@@ -167,6 +200,24 @@ body {
   padding: auto;
   grid-area: blog1;
 }
+.blog2text {
+  font-size: 0.7rem;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 3px;
+  margin-left: 15px;
+  margin-right: 15px;
+  grid-area: blog1;
+
+}
+
 /*BLOG3*/
 
 .blog3-container {
@@ -184,7 +235,7 @@ body {
   grid-area: blog3;
 }
 .blog3title {
-  font-size:1.2rem ;
+  font-size:1rem ;
   font-weight: bold;
   color: rgb(212,110,103);
   display: flex;
@@ -193,6 +244,23 @@ body {
   justify-content: center;
   padding: auto;
   grid-area: blog1;
+}
+.blog3text {
+  font-size: 0.7rem;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 3px;
+  margin-left: 15px;
+  margin-right: 15px;
+  grid-area: blog1;
+
 }
 /*BLOG4*/
 
@@ -204,7 +272,7 @@ body {
   grid-area: blog4;
 }
 .blog4title {
-  font-size:1.2rem ;
+  font-size:1rem ;
   font-weight: bold;
   color: rgb(212,110,103);
   display: flex;
@@ -221,6 +289,24 @@ body {
   border-radius: 25px;
   grid-area: blog4;
 }
+
+.blog4text {
+  font-size: 0.7rem;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 3px;
+  margin-left: 15px;
+  margin-right: 15px;
+  grid-area: blog1;
+
+}
 .button-toggle {
   display: none;
   background: none;
@@ -229,6 +315,32 @@ body {
   cursor: pointer;
   color: white;
 }
+.profile_box {
+  grid-area: profile;
+  margin-top: 80px; 
+}
+.profile_pic {
+  grid-area: profile;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: auto;
+  margin: 50px;
+  
+}
+.profile_text {
+  grid-area: profile;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  width: 1000px;
+  height: auto;
+  margin: 50px;
+}
+
+
+
 @media screen and (max-width: 768px) {
   .button-toggle {
     display: block; /* Mostrar botón hamburguesa */
@@ -258,4 +370,8 @@ body {
   .menu.open {
     display: flex;
   }
+} .footer {
+  background-color: #d4c4bf;
+  height: 200px;
+  grid-area: footer;
 }
